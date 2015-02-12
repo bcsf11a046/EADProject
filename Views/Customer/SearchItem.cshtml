@@ -1,0 +1,85 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout_customer.cshtml";
+}
+@model EADProject.Models.Fiction
+@Scripts.Render("~/bundles/jquery")
+   <script type="text/javascript">
+       $(document).ready(function () {
+           $('#type').change(function () {
+
+
+               var id = $('#type').val();
+               var value1 = $("#p1").val();
+               var value2 = $("#p2").val();
+               $.getJSON("/Customer/SearchBooks?id=" + id + "&min=" + value1 + "&max=" + value2, function ( data) {
+                   if (data) {
+                       $.each(data, function(idx, item){
+                           $('#d2').append('<p>' + item.Id + '</p>' + '<p>' + item.Name + '</p>' + '<p>' + item.Author + '</p>' + '<p>' + item.Price + '</p>' + '<img src=>' + item.Picture + '/>');
+                           if (id == 1)
+                           {
+                               $('#d2').append('<a class="button" href=' + "/Customer/AddFictionToCart/?id=" + item.Id + '>Add to Cart</a>');
+                           }
+                           else if (id == 2)
+                           {
+                               $('#d2').append('<a class="button" href=' + "/Customer/AddNonFictionToCart/?id=" + item.Id + '>Add to Cart</a>');
+                           }
+                           else if (id == 3)
+                           {
+                               $('#d2').append('<a class="button" href=' + "/Customer/AddHistoryToCart/?id=" + item.Id + '>Add to Cart</a>');
+                           }
+                           else if (id == 4)
+                           {
+                               $('#d2').append('<a class="button" href=' + "/Customer/AddMagzineToCart/?id=" + item.Id + '>Add to Cart</a>');
+                           }
+                           else if (id == 5)
+                           {
+                               $('#d2').append('<a class="button" href=' + "/Customer/AddComputerToCart/?id=" + item.Id + '>Add to Cart</a>');
+                           }
+                       })
+                   }
+                   else
+                   {
+                       $("#d2").text("Selected search no results");
+                   }
+               });
+           });
+       });
+    </script>
+    
+
+	<body id="page4">	                
+        <section id="content">
+			<div class="main">
+				<div class="indent-left">
+					<div class="wrapper">          
+        
+        
+          <article class="col-1">
+							<h3>Search Books</h3>
+								<fieldset>
+									<label>
+                                      Price From:<input type="text" name="lowerprice" id="p1" />
+                                       Price To:<input type="text" name="upperprice" id="p2" />
+                                            <select id ="type"> 
+                                                <option value="0">Select Type</option>
+                                                <option value="1">Fiction</option>
+                                                <option value="2">Non-Fiction</option>
+                                                <option value="3">History</option>
+                                                <option value="4">Magzines</option>
+                                                <option value="5">Computer Science</option>
+                                            
+                                            </select>
+                                        <div id ="d2">                                    
+                                        </div>
+                                    </label>
+						</article>
+        
+                 
+                  
+                        </div>
+				</div>
+			</div>
+		</section>
+		<script type="text/javascript"> Cufon.now(); </script>
+	</body>
+

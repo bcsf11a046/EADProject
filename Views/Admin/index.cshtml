@@ -1,0 +1,128 @@
+@{
+    Layout = "~/Views/Shared/_Layout_admin.cshtml";
+}
+		<script type="text/javascript">
+			$(function() { 
+				$('.close').bind('click', function(){
+					$(this).parent().show().fadeOut(500);
+				});
+			}); 
+		</script>
+	<body id="page1">
+		<section id="content">
+			<div class="main">
+				<div class="slider-wrapper">
+					<div class="slider">
+						<ul class="items">
+							<li>
+								<img src="~/images/slider2.jpg" alt="" />
+								<strong class="banner">
+									<a class="close" href="#">x</a>
+									<strong>Online Book Store</strong>
+									<span>Business Company</span>
+									<b class="margin-bot">This Online Book Store provides you a wide range of books to shop.</b>
+									<a class="button2" href="#">Read More</a>
+								</strong>
+							</li>
+							<li>
+								<img src="~/images/fiction-books.jpg" alt="" />
+								<strong class="banner">
+									<a class="close" href="#">x</a>
+									<strong>Fiction Books</strong>
+									<span>popular Procedures</span>
+									<b class="margin-bot">A Platform where you can easily find fiction books of your choice</b>
+									<a class="button2" href="#">Read More</a>
+								</strong>
+							</li>
+							<li>
+								<img src="~/images/non-fiction-books.jpg" alt="" />
+								<strong class="banner">
+									<a class="close" href="#">x</a>
+									<strong>Non-Fiction Books</strong>
+									<span>Buy Books</span>
+									<b class="margin-bot">A Platform where you can easily find non-fiction books of your choice<br>You can find best sellers books also.</b>
+									<a class="button2" href="#">Read More</a>
+								</strong>
+							</li>
+							<li>
+								<img src="~/images/history.jpg" alt="" />
+								<strong class="banner">
+									<a class="close" href="#">x</a>
+									<strong>History</strong>
+									<span>Search History</span>
+									<b class="margin-bot">Here you can find historical books, related to different regions.</b>
+									<a class="button2" href="#">Read More</a>
+								</strong>
+							</li>
+						</ul>
+					</div>
+					<ul class="pagination">
+						<li><a class="item-1" href=""><strong>01</strong></a></li>
+						<li><a class="item-2" href=""><strong>02</strong></a></li>
+						<li><a class="item-3" href=""><strong>03</strong></a></li>
+						<li><a class="item-4" href=""><strong>04</strong></a></li>
+					</ul>
+				</div>
+				<div class="border-bot1 img-indent-bot">
+					<h2>Web design, Graphic design, Illustrations, Identity and <strong>Photographies by Our Design Studio</strong></h2>
+				</div>
+				<div class="wrapper">
+					<article class="col-1">
+						<div class="indent-left">
+							<ul class="list-1">
+								<li><a href="#">Fiction</a></li>
+								<li><a href="#">Non-Fiction</a></li>
+								<li><a href="#">History</a></li>
+								<li><a href="#">Computer Science Books</a></li>
+								<li class="last-item"><a href="#">Magzines</a></li>
+							</ul>
+						</div>
+					</article>
+					<article class="col-2">
+						<h3>Welcome!</h3>
+						<div class="p1">
+							<figure class="img-border"><img src="~/images/page1-img1.jpg" alt="" /></figure>
+							<div class="clear"></div>
+						</div>
+						<p class="img-indent-bot">This is an online book store for the people to enjoy shopping book online at their home and get their shopping delivered at their door step</p>
+						<a class="button" href="#">Read More</a>
+					</article>
+					<article class="col-3">
+						<div class="indent-top">
+							<ul class="list-2">
+								<li>
+									<a class="item" href="#">Our Vision</a>
+									<span>We intend to provide our customers with the best online shopping experience from beginning to end, with a smart, searchable website, easy-to-follow instructions, clear and secure payment methods, and fast, quality delivery.</span>
+								</li>
+								<li>
+									<a class="item" href="#">Perfect Experience</a>
+									<span>You will surely enjoy here shopping of you own choice,easily.</span>
+								</li>
+								<li class="last-item">
+									<a class="item" href="#">News &amp; Events</a>
+									<span>New Books will be added every week to update our customers </span>
+									<a class="button" href="#">Read More</a>
+								</li>
+							</ul>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>		
+		<script type="text/javascript"> Cufon.now(); </script>
+		<script type="text/javascript">
+			$(window).load(function() {
+				$('.slider')._TMS({
+					duration:800,
+					easing:'easeOutQuart',
+					preset:'diagonalExpand',
+					slideshow:7000,
+					pagNums:false,
+					pagination:'.pagination',
+					banners:'fade',
+					pauseOnHover:true,
+					waitBannerAnimation:true
+				});
+			});
+		</script>
+	</body>

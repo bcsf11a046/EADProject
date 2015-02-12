@@ -1,0 +1,51 @@
+﻿@section signIn 
+{
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/jquery-1.7.1.js"></script>
+}
+
+@model EADProject.Models.User
+    <section id="content">
+			<div class="main">
+				<div class="indent-left">
+					<div class="wrapper">          
+           <article class="col-2">
+							<h3>Sign-In</h3>
+                 
+							 @{Html.BeginForm("validateLogin","Home",FormMethod.Post);}
+                                    @Html.AntiForgeryToken()
+                                    @Html.ValidationSummary(true)
+								<fieldset>
+									<label>
+										  @Html.LabelFor(m => m.UserName)
+                                    </label>
+                                    <label>
+                                          @Html.TextBoxFor(m => m.UserName)
+                                          @Html.ValidationMessageFor(m=> m.UserName)
+                                          <br />
+                                        </label>
+									<label>
+									 @Html.LabelFor(m => m.Password)
+									</label>
+                                    @Html.PasswordFor(model=>model.Password)
+                                    @Html.ValidationMessageFor(m=> m.Password)
+                                    <br />
+									<label>    
+                                    </label>
+									<div class="buttons-wrapper">
+										
+									<input type="submit" class="button" value ="SignIn" />
+									</div>
+
+                                    
+								</fieldset>
+            @{Html.EndForm();}
+    
+                     </article>
+
+                        </div>
+				</div>
+			</div>
+		</section>
+		<script type="text/javascript"> Cufon.now(); </script>

@@ -1,0 +1,38 @@
+﻿@model EADProject.Models.ComputerScience
+@{
+    Layout = "~/Views/Shared/_Layout_admin.cshtml";
+}
+     @Scripts.Render("~/bundles/jquery")
+	<body id="page4">
+        <section id="content">
+			<div class="main">
+				<div class="indent-left">
+					<div class="wrapper">          
+        
+        
+          <article class="col-1">
+							<h3>Update Computer Book</h3>
+								<fieldset>
+									<label>
+                                        
+                                    </label>
+                                    <fieldset id="d1"> </fieldset>
+                                  
+                                   <form id="contact-form" method ="post" action="/Admin/updateComputerConfirm/@Model.Id" enctype="multipart/form-data"><label><input type="text" name="name" value="@Model.Name"/></label><label><input type="text" name="author" value="@Model.Author"/></label><label><input type="text" name="price" value="@Model.Price" /></label><label><input type="file" name="picture" value="@Model.Picture"/></label><div class="buttons-wrapper"><input type="submit" class="button" value ="Save!" /></div></form>
+                                
+								</fieldset>
+							<!--</form>-->
+
+
+						</article>
+        
+                 
+                  
+                        </div>
+				</div>
+			</div>
+		</section>
+		
+		<script type="text/javascript"> Cufon.now(); </script>
+	</body>
+

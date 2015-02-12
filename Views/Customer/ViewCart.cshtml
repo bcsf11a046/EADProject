@@ -1,0 +1,51 @@
+﻿@model List<EADProject.Models.ShoppingCart>
+@{
+    Layout = "~/Views/Shared/_Layout_customer.cshtml";
+}
+	 @Scripts.Render("~/bundles/jquery")
+		<section id="content">
+			<div class="main">
+                <div id="searchResult"></div> 
+				<div id="il" class="indent-left">
+					<h3>Shopping Cart</h3>
+
+                     &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp&nbsp;
+                         &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;                       
+             <table>    
+		 @foreach (var q in Model)
+          {
+            
+        <tr>
+           <td>Product Id: @q.ProductId</td>
+        </tr>
+        
+        <tr>
+           <td>Product Name: @q.ProductName</td>
+        </tr>
+        <tr>
+           <td>Customer: @q.UserName</td>
+        </tr> 
+         <tr>
+           <td>Price: @q.Price</td>
+        </tr>  
+              
+        <tr>
+           <td>Product Type: @q.ProductType</td>
+        </tr>
+       <tr>
+          <td>--------------------------------</td> 
+       </tr>
+
+
+    }
+         <tr>
+       <td><a class="button" href="/Customer/CheckOut">Check Out</a></td>
+        </tr>  
+</table>
+                    </div>
+                </div>
+		</section>		
+		<script type="text/javascript"> Cufon.now(); </script>
+	</body>
+
+

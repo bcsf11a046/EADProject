@@ -1,0 +1,90 @@
+@{
+    Layout = "~/Views/Shared/_Layout_admin.cshtml";
+}
+     @Scripts.Render("~/bundles/jquery")
+          <script type="text/javascript">
+
+              $(document).ready(function () {
+                  $('#type').change(function () {
+                      var id = $('#type').val();
+
+                 //computer sciene
+                 if (id == 5)
+                 {
+                    $('#d1').html('<form id="contact-form" method ="post" action="saveComputerBook" enctype="multipart/form-data"><label><input type="text" name="name" value="Book Title" onBlur="if(this.value=="") this.value="Book Title"" onFocus="if(this.value =="Book Title") this.value="" /></label><label><input type="text" name="author" value="Author" onBlur="if(this.value=="") this.value="Author"" onFocus="if(this.value =="Author" ) this.value=""" /></label><label><input type="text" name="price" value="Price" onBlur="if(this.value=="") this.value="Price"" onFocus="if(this.value =="Price" ) this.value=""" /></label><label><input type="file" name="picture" value="Picture" onBlur="if(this.value=="") this.value="Picture"" onFocus="if(this.value =="Picture" ) this.value=""" /></label><div class="buttons-wrapper"><input type="submit" class="button" value ="Save!" /></div></form>');
+
+                 }//fiction
+                 else if (id == 1)
+                 {
+                     $('#d1').html('<form id="contact-form" method ="post" action="saveFictionBook" enctype="multipart/form-data"><label><input type="text" name="name" value="Book Title" onBlur="if(this.value=="") this.value="Book Title"" onFocus="if(this.value =="Book Title") this.value="" /></label><label><input type="text" name="author" value="Author" onBlur="if(this.value=="") this.value="Author"" onFocus="if(this.value =="Author" ) this.value=""" /></label><label><input type="text" name="price" value="Price" onBlur="if(this.value=="") this.value="Price"" onFocus="if(this.value =="Price" ) this.value=""" /></label><label><input type="file" name="picture" value="Picture" onBlur="if(this.value=="") this.value="Picture"" onFocus="if(this.value =="Picture" ) this.value=""" /></label><div class="buttons-wrapper"><input type="submit" class="button" value ="Save!" /></div></form>');
+                    
+                }
+                 //non-fiction
+                 else if (id == 2)
+                {
+                     $('#d1').html('<form id="contact-form" method ="post" action="saveNonFictionBook" enctype="multipart/form-data"><label><input type="text" name="name" value="Book Title" onBlur="if(this.value=="") this.value="Book Title"" onFocus="if(this.value =="Book Title") this.value="" /></label><label><input type="text" name="author" value="Author" onBlur="if(this.value=="") this.value="Author"" onFocus="if(this.value =="Author" ) this.value=""" /></label><label><input type="text" name="price" value="Price" onBlur="if(this.value=="") this.value="Price"" onFocus="if(this.value =="Price" ) this.value=""" /></label><label><input type="file" name="picture" value="Picture" onBlur="if(this.value=="") this.value="Picture"" onFocus="if(this.value =="Picture" ) this.value=""" /></label><div class="buttons-wrapper"><input type="submit" class="button" value ="Save!" /></div></form>');
+                  
+                }//history
+                 else if (id == 3)
+                 {
+
+                     $('#d1').html('<form id="contact-form" method ="post" action="saveHistoryBook" enctype="multipart/form-data"><label><input type="text" name="name" value="Book Title" onBlur="if(this.value=="") this.value="Book Title"" onFocus="if(this.value =="Book Title") this.value="" /></label><label><input type="text" name="author" value="Author" onBlur="if(this.value=="") this.value="Author"" onFocus="if(this.value =="Author" ) this.value=""" /></label><label><input type="text" name="price" value="Price" onBlur="if(this.value=="") this.value="Price"" onFocus="if(this.value =="Price" ) this.value=""" /></label><label><input type="file" name="picture" value="Picture" onBlur="if(this.value=="") this.value="Picture"" onFocus="if(this.value =="Picture" ) this.value=""" /></label><div class="buttons-wrapper"><input type="submit" class="button" value ="Save!" /></div></form>');
+
+
+                 }
+                     //magzine
+                 else if (id == 4)
+                 {
+
+                     $('#d1').html('<form id="contact-form" method ="post" action="saveMagzine" enctype="multipart/form-data"><label><input type="text" name="name" value="Magzine name" onBlur="if(this.value=="") this.value="Book Title"" onFocus="if(this.value =="Book Title") this.value="" /></label><label><input type="text" name="month" value="Issue Month" onBlur="if(this.value=="") this.value="Issue Month"" onFocus="if(this.value =="Issue Month" ) this.value=""" /></label><label><input type="text" name="subject" value="Subject" onBlur="if(this.value=="") this.value="Subject"" onFocus="if(this.value =="Subject" ) this.value=""" /></label><label><input type="text" name="price" value="Price" onBlur="if(this.value=="") this.value="Price"" onFocus="if(this.value =="Price" ) this.value=""" /></label><label><input type="file" name="picture" value="Picture" onBlur="if(this.value=="") this.value="Picture"" onFocus="if(this.value =="Picture" ) this.value=""" /></label><div class="buttons-wrapper"><input type="submit" class="button" value ="Save!" /></div></form>');
+
+
+                 }
+
+
+            });
+        });
+    </script>
+    
+
+	<body id="page4">	                
+        <section id="content">
+			<div class="main">
+				<div class="indent-left">
+					<div class="wrapper">          
+        
+        
+          <article class="col-1">
+							<h3>Add Book</h3>
+								<fieldset>
+									<label>
+                                            <select id ="type"> 
+                                            
+                                                <option value="0">Select Type</option>
+                                                <option value="1">Fiction</option>
+                                                <option value="2">Non-Fiction</option>
+                                                <option value="3">History</option>
+                                                <option value="4">Magzines</option>
+                                                <option value="5">Computer Science</option>
+                                            
+                                            </select>
+                                    </label>
+                                    <fieldset id="d1"> </fieldset>
+                                  
+                                   
+                                
+								</fieldset>
+							<!--</form>-->
+
+
+						</article>
+        
+                 
+                  
+                        </div>
+				</div>
+			</div>
+		</section>
+		<script type="text/javascript"> Cufon.now(); </script>
+	</body>
+

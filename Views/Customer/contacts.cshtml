@@ -1,0 +1,61 @@
+		<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;hl=en&amp;sensor=true&amp;key=ABQIAAAAWCGzSMrk7YDL2KSdECDFthRCU6CW1wRB4NQsX5PSi053h5zzZhQIZ5ivn4VAQx53xyYuNrvkOmgO1w" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+			   $('#map_canvas').googleMaps({
+				  latitude: 40.68221,
+				  longitude: -73.971212,
+						markers: {
+						latitude: 	40.68221,
+						longitude: -73.971212
+					}
+			   });
+			});
+		</script>
+	<body id="page5">
+		<section id="content">
+			<div class="main">
+				<div class="indent-left">
+					<div class="wrapper">
+						<article class="col-1">
+							<h3>Our Address</h3>
+							<div class="p1">
+								<figure class="img-border">
+									<div id="map_canvas"></div>
+								</figure>
+								<div class="clear"></div>
+							</div>
+							<dl>
+								<dt>8901 Marmora Road,<br>Glasgow, D04 89GR.</dt>
+								<dd><span>Freephone:</span>  +1 800 559 6580</dd>
+								<dd><span>Telephone:</span>  +1 800 603 6035</dd>
+								<dd><span>FAX:</span>  +1 800 889 9898</dd>
+								<dd><span>E-mail:</span> <a class="link-2" href="#">mail@demolink.org</a></dd>
+							</dl>
+						</article>
+						<article class="col-2">
+							<h3>Get In Touch</h3>
+							<form id="contact-form">
+								<fieldset>
+									<label>
+										<input type="text" value="Name" onBlur="if(this.value=='') this.value='Name'" onFocus="if(this.value =='Name' ) this.value=''" />
+									</label>
+									<label>
+									  <input type="text" value="Email" onBlur="if(this.value=='') this.value='Email'" onFocus="if(this.value =='Email' ) this.value=''" />
+									</label>
+									<label>
+									  <input type="text" value="Phone" onBlur="if(this.value=='') this.value='Phone'" onFocus="if(this.value =='Phone' ) this.value=''" />
+									</label>
+									<textarea onBlur="if(this.value=='') this.value='Message'" onFocus="if(this.value =='Message' ) this.value=''">Message</textarea>
+									<div class="buttons-wrapper">
+										<a class="button" onClick="document.getElementById('contact-form').reset()">Clear</a>
+										<a class="button" onClick="document.getElementById('contact-form').submit()">Send</a>
+									</div>
+								</fieldset>
+							</form>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>		
+		<script type="text/javascript"> Cufon.now(); </script>
+	</body>

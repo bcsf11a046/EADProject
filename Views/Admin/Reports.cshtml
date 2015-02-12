@@ -1,0 +1,58 @@
+﻿@model List<EADProject.Models.Report>
+@{
+    Layout = "~/Views/Shared/_Layout_admin.cshtml";
+}
+	 @Scripts.Render("~/bundles/jquery")
+	<body id="page3">
+		<section id="content">
+			<div class="main">
+               
+			 	<div id="d" class="indent-left">
+					
+                     <h3>Revenue Report  </h3>
+                     <br/><br/><br/>
+                     <table border="0" >
+   
+
+    <tr>
+        <th>Sr No</th>        
+        <th >Customer Name</th>
+        <th>Date/Time</th>
+        <th>Total Bill</th>
+        
+    </tr>
+  <tr></tr>
+                          @foreach (var v in Model )
+                      {
+                         <tr>
+
+                            
+                            <td width="100px" align="center">@v.Id <br/></td>        
+                            <td width="300px" align="center">@v.CustomerName<br/></td>
+                             <td width="200px" align="center">@v.Date<br/></td>
+
+                             <td width="100px" align="center">Rs.@v.TotalBill/=<br/></td>
+                           
+                        </tr>   
+                    } 
+                       <tr>
+                            <td width="100px" colspan="3" align="right"> Total Revenue</td>
+                           <td align="center" width="100px"> Rs.@ViewBag.x/= </td>      
+                          
+                      <tr>
+    
+
+        </table>
+        </div>
+
+    <br/><br/>
+   
+
+
+
+
+    		</div>
+		</section>
+		<script type="text/javascript"> Cufon.now(); </script>
+	</body>
+
